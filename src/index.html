@@ -5,23 +5,95 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Front End Application</title>
+    <title>Beer Бери</title>
     <!-- Chrome, Firefox OS and Opera -->
-    <meta name="theme-color" content="#000">
+    <meta name="theme-color" content="#f7c600">
     <!-- Windows Phone -->
-    <meta name="msapplication-navbutton-color" content="#000">
+    <meta name="msapplication-navbutton-color" content="#f7c600">
     <!-- iOS Safari -->
-    <meta name="apple-mobile-web-app-status-bar-style" content="#000">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#f7c600">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
 
     <header class="header" id="header">
-        <div class="container">
-            <div class="header-top">
+
+        <div class="header-top">
+            <div class="container">
+
+                <div class="header-top-container">
+                    <ul class="header-nav">
+                        <li class="header-nav__item"><a href="#" class="header-nav__link">Доставка и оплата</a></li>
+                        <li class="header-nav__item"><a href="#" class="header-nav__link">Акции</a></li>
+                        <li class="header-nav__item"><a href="#" class="header-nav__link">Бонусы</a></li>
+                        <li class="header-nav__item"><a href="#" class="header-nav__link">Оставить отзыв</a></li>
+                        <li class="header-nav__item"><a href="#" class="header-nav__link">Контакты</a></li>
+                    </ul>
+                    <a href="#" class="header-login">
+                        <i class="zmdi zmdi-account"></i>
+                        Вход/Регистрация
+                    </a>
+                </div>
 
             </div>
         </div>
+
+        <div class="container">
+            <div class="header-bottom">
+                <a href="#" class="header__logo logo">
+                    <img src="img/logo.png" alt="Beer Бери">
+                </a>
+
+                <ul class="header-contacts">
+                    <li class="header-contacts__item">
+                        <div class="header-contacts__icon">
+                            <i class="zmdi zmdi-phone"></i>
+                        </div>
+                        <div class="header-contacts__container">
+                            <a href="tel:8 (800) 256-24-80" class="header-contacts__top header-contacts__top--number">
+                                8 (800) 256-24-80
+                            </a>
+                            <a href="#callback" class="header-contacts__bottom fancybox header-contacts__bottom--yellow">
+                                Заказать звонок
+                            </a>
+                        </div>
+                    </li>
+                    <li class="header-contacts__item">
+                        <div class="header-contacts__icon">
+                            <i class="zmdi zmdi-pin-drop"></i>
+
+                        </div>
+                        <div class="header-contacts__container">
+                            <h6 class="header-contacts__top">
+                                Адрес:
+                            </h6>
+                            <a target="_blank" href="https://www.google.com.ua/maps/place/%D1%83%D0%BB.+%D0%94%D1%80%D1%83%D0%B6%D0%B1%D1%8B,+31,+%D0%A1%D1%82%D0%B5%D1%80%D0%BB%D0%B8%D1%82%D0%B0%D0%BC%D0%B0%D0%BA,+%D0%A0%D0%B5%D1%81%D0%BF.+%D0%91%D0%B0%D1%88%D0%BA%D0%BE%D1%80%D1%82%D0%BE%D1%81%D1%82%D0%B0%D0%BD,+%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D1%8F,+453121/@53.6375542,55.9275969,17z/data=!3m1!4b1!4m5!3m4!1s0x43d811c2f5ad5c9d:0xb073fb68d564b386!8m2!3d53.637551!4d55.9297856?hl=ru" class="header-contacts__bottom">
+                                г. Стерлитамак, ул. Дружбы, 31
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+
+                <a href="#" class="header-basket">
+                    <span class="header-basket__icon">
+                        <span class="header-basket__number">
+                            0
+                        </span>
+                        <i class="zmdi zmdi-shopping-basket"></i>
+                    </span>
+                    <span class="header-basket__container">
+                        <span class="header-basket__title">
+                            Корзина
+                        </span>
+                        <span class="header-basket__description">
+                            В корзине нет товаров
+                        </span>
+                    </span>
+                </a>
+            </div>
+        </div>
+
     </header>
 </body>
 <script src="js/bundle.js"></script>
