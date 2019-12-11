@@ -1,4 +1,6 @@
 import { detectBrowser } from './_helpers';
+import './_svg';
+import './_parallax-mouse';
 
 class Application {
     constructor() {
