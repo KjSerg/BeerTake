@@ -39,6 +39,7 @@
     "webpack-stream": "^4.0.3"
   },
   "dependencies": {
+    "aos": "^2.3.4",
     "jquery": "^3.3.1",
     "slick-carousel": "^1.8.1"
   }

@@ -1,3 +1,4 @@
+
 import { detectBrowser } from './_helpers';
 import { hamburger } from './_hamburger';
 import './_svg';
@@ -7,6 +8,7 @@ import Sliders from './Sliders';
 
 import ProductFilter from './ProductFilter';
 
+import AOS from 'aos';
 
 class Application {
     constructor() {
@@ -15,6 +17,10 @@ class Application {
 
     static initializePlugins() {
         const sliders = new Sliders();
+
+        AOS.init({
+            once: true,
+        });
     };
 
     static initializeModules() {
