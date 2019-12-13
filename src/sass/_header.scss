@@ -96,7 +96,7 @@
   }
 
   &__logo {
-    margin-right: 6rem;
+    margin-right: 3rem;
   }
 
   &-bottom {
@@ -111,18 +111,12 @@
     align-items: center;
     justify-content: space-between;
 
-    margin-right: 5.8rem;
+    margin-right: 3.2rem;
     &__item {
       display: flex;
       align-items: center;
       justify-content: center;
 
-
-
-      //margin-right: 6rem;
-      //&:last-child {
-      //  margin-right: 0;
-      //}
     }
 
     &__container {
@@ -144,6 +138,8 @@
       background-size:contain;
 
       background-repeat: no-repeat;
+
+      background-position: center;
 
 
       color: #f7c600;
@@ -261,6 +257,62 @@
       font-family: "GothamPro";
       font-size: 1.3rem;
       font-weight: 400;
+    }
+  }
+
+
+  &-favorites {
+    margin-right: 1rem;
+    text-decoration: none;
+    i {
+      color: #f7c600;
+      font-size: 1.6rem;
+      font-weight: 400;
+    }
+
+    &__icon {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 7.2rem;
+      height: 5.2rem;
+
+      margin-right: 0.6rem;
+
+      background-image: url(../img/header-contacts-decor.png);
+
+      background-size:contain;
+
+      background-repeat: no-repeat;
+
+
+      color: #f7c600;
+      font-size: 1.6rem;
+      font-weight: 400;
+    }
+
+    &__number {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 2.6rem;
+      height: 2.6rem;
+
+      border-radius: 50%;
+
+      right: 0;
+      top: 0;
+
+      transform: translate(0, 0);
+
+      box-shadow: 0 1rem 2rem rgba(25, 56, 95, 0.14);
+      background-color: #ffffff;
+      color: #333333;
+      font-family: 'GothamPro-Medium';
+      font-size: 1.2rem;
+      font-weight: 500;
     }
   }
 }

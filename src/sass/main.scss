@@ -4,6 +4,8 @@
 
 // LIBS
 @import "libs/bootstrap-grid";
+@import "../../node_modules/slick-carousel/slick/slick.scss";
+@import "../../node_modules/slick-carousel/slick/slick-theme.scss";
 
 // BASE
 @import "fonts";
@@ -17,6 +19,9 @@
 
 
 
-// INDEX PAGE -- BANNER
-
+// INDEX PAGE
 @import "pages/index/banner";
+@import "pages/index/advantages";
+@import "pages/index/products";
+@import "pages/index/about";
+@import "pages/index/news";

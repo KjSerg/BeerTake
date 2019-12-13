@@ -2,17 +2,22 @@ import { detectBrowser } from './_helpers';
 import './_svg';
 import './_parallax-mouse';
 
+import Sliders from './Sliders';
+
+import ProductFilter from './ProductFilter';
+
+
 class Application {
     constructor() {
         Application.init();
     }
 
     static initializePlugins() {
-        // INIT YOUR PLUGINS
+        const sliders = new Sliders();
     };
 
     static initializeModules() {
-        // INIT YOUR MODULES
+        const filter = new ProductFilter();
     };
 
     static detectBrowser() {
