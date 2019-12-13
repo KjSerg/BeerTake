@@ -19,20 +19,14 @@ export default class Sliders {
                 const $left = $this.closest('.slider-wrapper').find('.slider-prev');
                 const $right = $this.closest('.slider-wrapper').find('.slider-next');
 
-                const options = {};
+                const options = arg;
 
                 if($left.length > 0 && $right.length > 0) {
                     options.prevArrow = $left;
                     options.nextArrow = $right;
                 }
 
-                if(arg.slidesToShow) {
-                    options.slidesToShow = arg.slidesToShow;
-                }
 
-                if(arg.slidesToScroll) {
-                    options.slidesToScroll = arg.slidesToScroll;
-                }
 
                 if(arg.infinite) {
                     options.infinite = arg.infinite;
@@ -54,11 +48,47 @@ export default class Sliders {
         _this.initSliders($('.products-content'), {
             slidesToShow: 4,
             slidesToScroll: 2,
+            responsive: [
+                {
+                    breakpoint: 701,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 1,
+                    }
+                },
+                {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 2,
+                    }
+                },
+                {
+                    breakpoint: 441,
+                    settings: {
+                        slidesToShow: 1,
+                    }
+                },
+            ]
         });
 
         _this.initSliders($('.news-slider'), {
             slidesToShow: 3,
             slidesToScroll: 1,
+            responsive: [
+                {
+                    breakpoint: 701,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1,
+                    }
+                },
+                {
+                    breakpoint: 501,
+                    settings: {
+                        slidesToShow: 1,
+                    }
+                },
+            ]
         });
     }
 }

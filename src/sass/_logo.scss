@@ -23,11 +23,15 @@
     pointer-events: none;
 
     transition: 0.5s ease;
+    @media all and (max-width: 500px) {
+      display: none;
+    }
   }
 
   &:hover {
     &:after {
       border: 2px solid #fcd804;
+
     }
 
   }

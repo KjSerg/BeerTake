@@ -21,6 +21,11 @@
     border-radius: 1rem 1rem 0 0;
     background-color: #ffffff;
 
+    @media all and (max-width: 480px) {
+      max-width: 100%;
+      margin: 0;
+    }
+
     &-header {
       display: flex;
       align-items: center;
@@ -53,6 +58,11 @@
 
     &-list {
       padding: 0 2rem;
+      @media all and (max-width: 480px) {
+        display: flex;
+        flex-wrap: wrap;
+        //justify-content:center;
+      }
       &__item {
         display: flex;
         align-items: center;
@@ -60,6 +70,16 @@
         padding: 2.2rem 0;
 
         border-bottom: 1px solid rgba(#bababa, 0.12);
+
+        @media all and (max-width: 480px) {
+          width: 50%;
+          padding: 2.2rem 1rem;
+        }
+
+        @media all and (max-width: 340px) {
+          justify-content: center;
+          text-align: center;
+        }
 
 
         &:hover {
@@ -79,6 +99,11 @@
         height: 3.4rem;
         margin-right: 1.6rem;
         transition: 0.5s ease;
+
+        @media all and (max-width: 340px) {
+          display: none;
+        }
+
         img, svg {
           width: 100%;
           height: 100%;
@@ -96,6 +121,10 @@
   }
 
   display: flex;
+
+  @media all and (max-width: 480px) {
+    flex-direction: column-reverse;
+  }
 
   &-container {
     width: 100%;
@@ -121,6 +150,11 @@
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.36rem;
+
+    @media all and (max-width: 480px) {
+      margin: auto;
+      margin-bottom: 4rem;
+    }
 
     strong {
       position: relative;
@@ -154,6 +188,16 @@
     width: 37.8rem;
     height: 9.8rem;
 
+    @media all and (max-width: 550px) {
+      width: 30rem;
+      height: 7rem;
+    }
+
+    @media all and (max-width: 480px) {
+      width: 100%;
+      height: 9.8rem;
+    }
+
     margin-bottom: 3rem;
 
     pointer-events: none;
@@ -178,8 +222,14 @@
     font-size: 1.8rem;
     font-weight: 500;
     line-height: 3rem;
-  }
 
+    @media all and (max-width: 480px) {
+      width: 100%;
+      margin-bottom: 2rem;
+
+      text-align: center;
+    }
+  }
 
   &-decoration {
     position: absolute;
@@ -190,6 +240,8 @@
     right: 26rem;
 
     pointer-events: none;
+
+
 
     &__item {
       position: absolute;
@@ -207,6 +259,9 @@
         right: 0;
         bottom:10.5rem;
         z-index: 1;
+        @media all and (max-width: 700px) {
+          display: none;
+        }
       }
       &:nth-child(2) {
         width: 21rem;
@@ -214,6 +269,7 @@
         left: 10rem;
         bottom: 4rem;
         z-index: 1;
+
       }
       &:nth-child(3) {
         width: 85.9rem;
@@ -232,6 +288,50 @@
         z-index: 1;
       }
     }
+
+
+    @media all and (max-width: 1820px) {
+      right: 22rem;
+    }
+    @media all and (max-width: 1720px) {
+      right: 7rem;
+    }
+    @media all and (max-width: 1440px) {
+      right: 3rem;
+    }
+
+    @media all and (max-width: 1366px) {
+      right: 0;
+    }
+    @media all and (max-width: 1200px) {
+      right: -10rem;
+    }
+    @media all and (max-width: 1199px) {
+      right: 7rem;
+    }
+    @media all and (max-width: 1100px) {
+      right: 1rem;
+    }
+    @media all and (max-width: 1024px) {
+      right: -10rem;
+    }
+    @media all and (max-width: 1023px) {
+      right: -17rem;
+    }
+
+    @media all and (max-width: 700px) {
+      width: 46rem;
+      right: -12rem;
+    }
+
+    @media all and (max-width: 600px) {
+      right: -25rem;
+    }
+
+    @media all and (max-width: 550px) {
+      display: none;
+    }
+
   }
 
   &-parallax {
@@ -245,6 +345,10 @@
 
     pointer-events: none;
 
+    @media all and (max-width: 840px) {
+      display: none;
+    }
+
     img{
       position: absolute;
       z-index: 1;
@@ -253,16 +357,45 @@
         top: 13rem;
         left: 21.6rem;
         transition: 1s ease;
+
+        @media all and (max-width: 1800px) {
+          left: 5rem;
+        }
+        @media all and (max-width: 1440px) {
+          left: 1rem;
+        }
+        @media all and (max-width: 1366px) {
+          zoom: 0.5;
+          left: 0;
+        }
       }
       &:nth-child(2) {
         top: 38.1rem;
         left: 6.8rem;
         transition: 0.5s ease;
+        @media all and (max-width: 1800px) {
+          left: 2rem;
+        }
+        @media all and (max-width: 1440px) {
+          left: 1rem;
+        }
+        @media all and (max-width: 1366px) {
+          zoom: 0.5;
+        }
+        @media all and (max-width: 1200px) {
+          display: none;
+        }
+        @media all and (max-width: 1199px) {
+          display: inline-block;
+        }
       }
       &:nth-child(3) {
         top: 15.3rem;
         right: 24.8rem;
         transition: 0.6s ease-in-out;
+        @media all and (max-width: 1023px) {
+          display: none;
+        }
       }
       &:nth-child(4) {
         top: 47.7rem;

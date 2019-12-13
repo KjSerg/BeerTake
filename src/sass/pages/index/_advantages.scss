@@ -1,12 +1,17 @@
 .advantages {
   &-section {
     padding-top: 8.6rem;
-    //margin-bottom: 7.9rem;
   }
 
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @media all and (max-width: 680px) {
+    flex-wrap: wrap;
+
+    justify-content:space-around;
+  }
 
   &-item {
     position: relative;
@@ -24,6 +29,24 @@
 
     overflow: hidden;
 
+    @media all and (max-width: 1023px) {
+      max-width: 32rem;
+    }
+
+    @media all and (max-width: 700px) {
+      max-width: 31rem;
+    }
+
+    @media all and (max-width: 680px) {
+      max-width: 48%;
+      margin-bottom: 2rem;
+    }
+
+    @media all and (max-width: 500px) {
+      max-width: 100%;
+    }
+
+
     &__number {
       position: absolute;
     }
@@ -32,6 +55,10 @@
       width: 13.4rem;
       height: 13.3rem;
       margin-right: 4rem;
+
+      @media all and (max-width: 700px) {
+        margin-right: 2rem;
+      }
 
       img {
         max-width: 100%;

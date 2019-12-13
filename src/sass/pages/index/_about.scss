@@ -8,8 +8,15 @@
   align-items: center;
   justify-content: center;
 
+  @media all and (max-width: 600px) {
+    flex-direction: column;
+  }
+
   &__title {
     text-align: left;
+    @media all and (max-width: 600px) {
+      text-align: center;
+    }
   }
   
   &__image {
@@ -23,6 +30,18 @@
     height: 100%;
     max-width: 48.6rem;
     max-height: 59.7rem;
+
+    @media all and (max-width: 600px) {
+      margin-right:0;
+      margin-bottom: 2rem;
+
+      max-width: 30rem;
+      max-height: none;
+    }
+
+    img {
+      max-width: 100%;
+    }
   }
 
   &__text {

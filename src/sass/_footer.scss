@@ -36,6 +36,13 @@
     padding-bottom: 5rem;
 
     border-bottom: 1px solid rgba(#fff, 0.1);
+
+    @media all and (max-width: 500px) {
+      flex-wrap: wrap;
+      justify-content: space-between;
+      //flex-direction: column;
+    }
+
   }
 
   &-copyright {
@@ -98,8 +105,35 @@
   &-column {
     margin-right: 6.5rem;
 
+    @media all and (max-width: 680px) {
+      margin-right: 2rem;
+
+    }
+
+    @media all and (max-width: 500px) {
+      margin: 0 2rem 2rem 2rem;
+
+      width: 33%;
+    }
+
+
+    &--logo {
+      @media all and (max-width: 500px) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin-bottom: 2rem;
+        width: 100%;
+
+      }
+    }
+
     &:last-child {
       margin-right: 0;
+      @media all and (max-width: 500px) {
+        margin: 0 2rem 2rem 2rem;
+      }
     }
 
     &__title {

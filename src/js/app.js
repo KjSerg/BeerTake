@@ -1,6 +1,7 @@
 import { detectBrowser } from './_helpers';
+import { hamburger } from './_hamburger';
 import './_svg';
-import './_parallax-mouse';
+import './_parallax';
 
 import Sliders from './Sliders';
 
@@ -18,6 +19,8 @@ class Application {
 
     static initializeModules() {
         const filter = new ProductFilter();
+
+        hamburger();
     };
 
     static detectBrowser() {

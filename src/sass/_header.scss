@@ -1,6 +1,9 @@
 .header {
+  position: relative;
   background-color: #ffffff;
+
   &-top {
+
     background-color: #f7f9fc;
     &-container {
       display: flex;
@@ -10,12 +13,46 @@
 
     }
   }
+
   &-nav {
-    display: flex;
+    display: flex!important;
     align-items: center;
     justify-content: center;
+
+    transition: 0.5s ease;
+
+    @media all and (max-width: 550px) {
+
+      flex-direction: column;
+
+      position: absolute;
+
+      top: 100%;
+      left:0;
+
+      transform: translateY(-100rem);
+
+      z-index: 2;
+
+      width: 100%;
+      //min-height: 100%;
+
+      background-color: #f7f9fc;
+
+      &.show {
+        transform: translateY(-0rem);
+      }
+
+    }
+
     &__item {
       margin-right: 4rem;
+      @media all and (max-width: 550px) {
+        width: 100%;
+        margin: 0;
+        text-align: center;
+        border-bottom: 1px solid #f7c600;
+      }
       &:last-child {
         margin-right: 0;
       }
@@ -28,6 +65,13 @@
       font-size: 1.3rem;
       font-weight: 400;
       text-decoration: none;
+
+      @media all and (max-width: 550px) {
+        display: inline-block;
+        font-size: 1.8rem;
+        width: 100%;
+        padding: 2.5rem 0;
+      }
 
       &:before, &:after {
         position: absolute;
@@ -43,6 +87,9 @@
 
         border: 1px solid #f7c600;
         transition: 0.5s ease;
+        @media all and (max-width: 550px) {
+          display: none;
+        }
       }
 
       &:before {
@@ -74,6 +121,7 @@
       }
     }
   }
+
   &-login {
     border-bottom: 1px solid transparent;
     color: #2c2c2c;
@@ -82,6 +130,11 @@
     text-decoration: none;
     font-family: 'GothamProNarrow-Medium';
     transition: 0.5s ease;
+
+    @media all and (max-width: 450px) {
+      margin-left: auto;
+      margin-right: 2rem;
+    }
 
     i {
       display: inline-block;
@@ -97,6 +150,16 @@
 
   &__logo {
     margin-right: 3rem;
+    @media all and (max-width: 450px) {
+
+      position: absolute;
+
+      margin-right: 0;
+
+      top: 0;
+      left: 0;
+
+    }
   }
 
   &-bottom {
@@ -112,11 +175,25 @@
     justify-content: space-between;
 
     margin-right: 3.2rem;
+
+    @media all and (max-width: 768px) {
+     margin: auto;
+    }
+
+    @media all and (max-width: 450px) {
+      margin-right: auto;
+      margin-left: 0;
+    }
+
     &__item {
       display: flex;
       align-items: center;
       justify-content: center;
-
+      &--address {
+        @media all and (max-width: 768px) {
+          display: none;
+        }
+      }
     }
 
     &__container {
@@ -145,6 +222,11 @@
       color: #f7c600;
       font-size: 1.6rem;
       font-weight: 400;
+
+      @media all and (max-width: 500px) {
+        display: none;
+      }
+
     }
 
     &__top {
@@ -192,6 +274,10 @@
     width: 100%;
     max-width: 23.1rem;
     text-decoration: none;
+
+    @media all and (max-width: 768px) {
+      max-width: 9rem;
+    }
 
     &__icon {
       position: relative;
@@ -250,6 +336,10 @@
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.11rem;
+
+      @media all and (max-width: 768px) {
+        display: none;
+      }
     }
 
     &__description {
@@ -257,13 +347,16 @@
       font-family: "GothamPro";
       font-size: 1.3rem;
       font-weight: 400;
+      @media all and (max-width: 768px) {
+        display: none;
+      }
     }
   }
-
 
   &-favorites {
     margin-right: 1rem;
     text-decoration: none;
+
     i {
       color: #f7c600;
       font-size: 1.6rem;
@@ -313,6 +406,60 @@
       font-family: 'GothamPro-Medium';
       font-size: 1.2rem;
       font-weight: 500;
+    }
+  }
+}
+
+.hamburger {
+  display: none;
+  @media all and (max-width: 550px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+
+    width: 3rem;
+    height: 2rem;
+
+    span {
+      position: absolute;
+      display: inline-block;
+      width: 100%;
+      height: 2px;
+
+      background-color: #f7c600;
+
+      border-radius: 2px;
+
+      transition: 0.2s ease;
+
+      &:nth-child(1) {
+        top: 0;
+      }
+      &:nth-child(2) {
+        top: calc(50% - 1px);
+      }
+      &:nth-child(3) {
+        bottom: 0;
+      }
+    }
+
+
+    &.show {
+      span {
+        &:nth-child(1) {
+          top: 50%;
+          transform: translateX(-0%) translateY(50%) rotate(45deg);
+        }
+        &:nth-child(2) {
+          opacity: 0;
+        }
+        &:nth-child(3) {
+          bottom: 32%;
+          transform:  translateX(-0%) translateY(50%) rotate(-45deg);
+        }
+      }
     }
   }
 }
