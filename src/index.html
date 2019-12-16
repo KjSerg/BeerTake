@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Beer Бери</title>
+    <title>BeerБери</title>
     <!-- Chrome, Firefox OS and Opera -->
     <meta name="theme-color" content="#f7c600">
     <!-- Windows Phone -->
@@ -2253,7 +2253,12 @@
         <h6 class="modal__title">
             Заказать звонок
         </h6>
-        <form action="" class="modal-form sing-in" novalidate>
+        <form action="mail.php" class="modal-form sing-in" novalidate>
+
+            <input type="hidden" name="project_name" value="BeerБери">
+            <input type="hidden" name="admin_email" value="kalandzhii.s@profmk.ru">
+            <input type="hidden" name="form_subject" value="Заказать звонок">
+
             <label class="modal-form__label">
                 <span class="modal-form__text">
                     Имя

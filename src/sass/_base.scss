@@ -195,4 +195,8 @@ a {
 input {
   outline: none;
   box-sizing: border-box;
+
+  &.error {
+    border-color: red;
+  }
 }

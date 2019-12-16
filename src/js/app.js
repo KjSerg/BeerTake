@@ -3,6 +3,7 @@ import { detectBrowser } from './_helpers';
 import { hamburger } from './_hamburger';
 import './_svg';
 import './_parallax';
+import './_validation';
 
 import Sliders from './Sliders';
 
@@ -10,6 +11,8 @@ import ProductFilter from './ProductFilter';
 
 import AOS from 'aos';
 import '@fancyapps/fancybox';
+import 'jquery.maskedinput/src/jquery.maskedinput';
+
 
 class Application {
     constructor() {
@@ -25,7 +28,7 @@ class Application {
 
         $('.fancybox').fancybox();
 
-        // $.fancybox.open($('#thanks'));
+        $('input[type="tel"]').mask("+7(999) 999-9999");
     };
 
     static initializeModules() {
