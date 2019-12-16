@@ -398,7 +398,8 @@
     transition: 0.5s ease;
 
     &:hover {
-      box-shadow: 0 2rem 4rem rgba(143, 150, 166, 0.2);
+      background-color: #f7c600;
+      color: #ffffff;
     }
   }
 

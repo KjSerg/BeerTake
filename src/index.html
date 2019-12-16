@@ -19,7 +19,7 @@
 
     <header class="header" id="header">
 
-        <div  data-aos="fade-down" class="header-top">
+        <div  class="header-top">
             <div class="container">
 
                 <div class="header-top-container">
@@ -30,7 +30,7 @@
                         <li class="header-nav__item"><a href="#" class="header-nav__link">Оставить отзыв</a></li>
                         <li class="header-nav__item"><a href="#" class="header-nav__link">Контакты</a></li>
                     </ul>
-                    <a href="#" class="header-login">
+                    <a href="#sing-in" class="header-login fancybox">
                         <i class="zmdi zmdi-account"></i>
                         Вход/Регистрация
                     </a>
@@ -45,7 +45,7 @@
         </div>
 
         <div class="container">
-            <div class="header-bottom" data-aos="fade-up">
+            <div class="header-bottom" >
                 <a href="#" class="header__logo logo">
                     <img src="img/logo.png" alt="Beer Бери">
                 </a>
@@ -67,7 +67,6 @@
                     <li class="header-contacts__item header-contacts__item--address">
                         <div class="header-contacts__icon">
                             <i class="zmdi zmdi-pin-drop"></i>
-
                         </div>
                         <div class="header-contacts__container">
                             <h6 class="header-contacts__top">
@@ -89,7 +88,7 @@
                     </span>
                 </a>
 
-                <a href="#" class="header-basket">
+                <a href="#modal-basket" class="header-basket fancybox">
                     <span class="header-basket__icon">
                         <span class="header-basket__number">
                             0
@@ -101,7 +100,7 @@
                             Корзина
                         </span>
                         <span class="header-basket__description">
-                            В корзине нет товаров
+                            4 позиции на <strong> 470 руб. </strong>
                         </span>
                     </span>
                 </a>
@@ -2170,6 +2169,275 @@
         </div>
     </footer>
 
+
+    <div class="modal modal-sing-in" id="sing-in">
+        <h6 class="modal__title">
+            Войти
+        </h6>
+        <form action="" class="modal-form sing-in" novalidate>
+            <label class="modal-form__label">
+                <span class="modal-form__text">
+                    Имя пользователя или E-mail
+                </span>
+                <input type="text" name="email" required class="modal-form__input">
+            </label>
+            <label class="modal-form__label">
+                <span class="modal-form__text">
+                    Пароль
+                </span>
+                <input type="password" required name="password" class="modal-form__input">
+            </label>
+            <button class="button modal-form__button">
+                Войти
+            </button>
+        </form>
+
+        <div class="modal-links">
+            <a href="#register" class="fancybox">
+                Регистрация
+            </a>
+            <a href="#reset-password" class="fancybox">
+                Забыли пароль?
+            </a>
+        </div>
+    </div>
+
+    <div class="modal modal-register" id="register">
+        <h6 class="modal__title">
+            Регистрация
+        </h6>
+        <form action="" class="modal-form sing-in" novalidate>
+            <label class="modal-form__label">
+                <span class="modal-form__text">
+                    Имя
+                </span>
+                <input type="text" name="name" required class="modal-form__input">
+            </label>
+            <label class="modal-form__label">
+                <span class="modal-form__text">
+                    Номер телефона
+                </span>
+                <input type="tel" name="phone" required class="modal-form__input">
+            </label>
+            <label class="modal-form__label">
+                <span class="modal-form__text">
+                    E-mail
+                </span>
+                <input type="email" name="email" required class="modal-form__input">
+            </label>
+            <label class="modal-form__label">
+                <span class="modal-form__text">
+                   Пароль
+                </span>
+                <input type="password" name="password" required class="modal-form__input">
+            </label>
+            <label class="modal-form__label">
+                <span class="modal-form__text">
+                   Подтвердить пароль
+                </span>
+                <input type="password" name="password1" required class="modal-form__input">
+            </label>
+            <button class="button modal-form__button">
+                Зарегистрироваться
+            </button>
+        </form>
+
+        <div class="modal-text">
+            <p>
+                Если вы нажимаете на кнопку “Зарегистрироваться”, значит вы даете согласие на обработку <a href="#">персональных данных</a>
+            </p>
+        </div>
+    </div>
+
+    <div class="modal modal-callback" id="callback">
+        <h6 class="modal__title">
+            Заказать звонок
+        </h6>
+        <form action="" class="modal-form sing-in" novalidate>
+            <label class="modal-form__label">
+                <span class="modal-form__text">
+                    Имя
+                </span>
+                <input type="text" name="name" required class="modal-form__input">
+            </label>
+            <label class="modal-form__label">
+                <span class="modal-form__text">
+                    Номер телефона
+                </span>
+                <input type="tel" name="phone" required class="modal-form__input">
+            </label>
+
+            <button class="button modal-form__button">
+                Заказать звонок
+            </button>
+        </form>
+
+
+    </div>
+
+    <div class="modal modal-thanks" id="thanks">
+        <div class="modal-thanks__img">
+            <img src="img/thanks-img.png" alt="">
+        </div>
+        <h6 class="modal__title">
+            Спасибо!
+        </h6>
+        <div class="modal-text" style="text-align: center">
+            <p>
+                Мы скоро свяжемся с Вами.
+            </p>
+        </div>
+    </div>
+
+    <div class="modal modal-reset-password" id="reset-password">
+        <h6 class="modal__title">
+            Восстановление пароля
+        </h6>
+        <form action="" class="modal-form sing-in" novalidate>
+            <label class="modal-form__label">
+                <span class="modal-form__text">
+                    E-mail
+                </span>
+                <input type="text" name="email" required class="modal-form__input">
+            </label>
+
+            <button class="button modal-form__button">
+                Отправить
+            </button>
+        </form>
+    </div>
+
+    <div id="modal-basket" class=" modal-basket basket">
+        <h6 class="modal__title basket__title">
+            Корзина
+        </h6>
+        <div class="basket-header basket-row">
+            <div class="basket-header__item basket-column">
+                продукция
+            </div>
+            <div class="basket-header__item basket-column">
+                Количество
+            </div>
+            <div class="basket-header__item basket-column">
+                Цена
+            </div>
+        </div>
+        <div class="basket-list">
+            <div class="basket-list__item basket-row">
+                <div class="basket-column basket-list__wrap">
+                    <div class="basket-list__img">
+                        <img src="img/product-1.png" alt="">
+                    </div>
+                    <div class="basket-list__title">
+                        <a href="#">
+                            Guinness
+                        </a>
+
+                    </div>
+                </div>
+                <div class="basket-column basket-list__wrap">
+                    <div class="basket-list__quantity" data-unit="л">
+                        <a href="#" class="minus">
+                            <img src="img/minus.png" alt="">
+                        </a>
+                        <input type="text" readonly value="1л">
+                        <a href="#" class="plus">
+                            <img src="img/plus.png" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="basket-column basket-list__wrap">
+                    <div class="basket-list__price">
+                        <p>92 <sup>РУБ.</sup></p>
+                    </div>
+                    <a href="#" class="basket-list__delete">
+                        <i class="zmdi zmdi-delete"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="basket-list__item basket-row">
+                <div class="basket-column basket-list__wrap">
+                    <div class="basket-list__img">
+                        <img src="img/product-8.png" alt="">
+                    </div>
+                    <div class="basket-list__title">
+                        <a href="#">
+                            Сырная стружка со вкусом салями
+                        </a>
+
+                    </div>
+                </div>
+                <div class="basket-column basket-list__wrap">
+                    <div class="basket-list__quantity" data-unit="г">
+                        <a href="#" class="minus">
+                            <img src="img/minus.png" alt="">
+                        </a>
+                        <input type="text" readonly value="100г">
+                        <a href="#" class="plus">
+                            <img src="img/plus.png" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="basket-column basket-list__wrap">
+                    <div class="basket-list__price">
+                        <p>62 <sup>РУБ.</sup></p>
+                    </div>
+                    <a href="#" class="basket-list__delete">
+                        <i class="zmdi zmdi-delete"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="basket-list__item basket-row">
+                <div class="basket-column basket-list__wrap">
+                    <div class="basket-list__img">
+                        <img src="img/product-2.png" alt="">
+                    </div>
+                    <div class="basket-list__title">
+                        <a href="#">
+                            Большое название пива в 2 строки
+                        </a>
+
+                    </div>
+                </div>
+                <div class="basket-column basket-list__wrap">
+                    <div class="basket-list__quantity" data-unit="л">
+                        <a href="#" class="minus">
+                            <img src="img/minus.png" alt="">
+                        </a>
+                        <input type="text" readonly value="1л">
+                        <a href="#" class="plus">
+                            <img src="img/plus.png" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="basket-column basket-list__wrap">
+                    <div class="basket-list__price">
+                        <p>92 <sup>РУБ.</sup></p>
+                    </div>
+                    <a href="#" class="basket-list__delete">
+                        <i class="zmdi zmdi-delete"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="basket-sum-wrapper">
+            <div class="basket-sum">
+                <p>
+                    Сумма заказа:
+                </p>
+                <div class="basket-sum__number">
+                    <strong>
+                        342
+                    </strong>
+                    <sup>РУБ.</sup>
+                </div>
+            </div>
+            <a href="#" class="button basket__button">
+                оформить заказ
+            </a>
+        </div>
+
+    </div>
 
 </body>
 <script src="js/bundle.js"></script>

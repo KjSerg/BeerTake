@@ -347,6 +347,9 @@
       font-family: "GothamPro";
       font-size: 1.3rem;
       font-weight: 400;
+      strong {
+        color: #f7c600;
+      }
       @media all and (max-width: 768px) {
         display: none;
       }

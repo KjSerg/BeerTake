@@ -9,6 +9,7 @@ import Sliders from './Sliders';
 import ProductFilter from './ProductFilter';
 
 import AOS from 'aos';
+import '@fancyapps/fancybox';
 
 class Application {
     constructor() {
@@ -21,6 +22,10 @@ class Application {
         AOS.init({
             once: true,
         });
+
+        $('.fancybox').fancybox();
+
+        // $.fancybox.open($('#thanks'));
     };
 
     static initializeModules() {
